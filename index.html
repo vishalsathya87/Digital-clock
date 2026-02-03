@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Paper World Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<div class="hero">
+    <div class="noise-overlay"></div>
+
+    <div class="stars"></div>
+    
+    <div class="clouds-container">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+    </div>
+
+    <div class="sky-orb-container">
+        <div class="string"></div>
+        <div class="orb sun" id="sun"></div>
+        <div class="orb moon hidden" id="moon">
+            <div class="crater c1"></div>
+            <div class="crater c2"></div>
+        </div>
+    </div>
+
+    <div class="paper-plane-container">
+        <svg viewBox="0 0 24 24" class="plane-icon">
+            <path d="M2 12l20-9-9 20-2-9-9-2z" fill="white" />
+        </svg>
+    </div>
+
+    <div class="paper-layer layer-mountains"></div>
+    <div class="paper-layer layer-hills-back"></div>
+    <div class="paper-layer layer-hills-front"></div>
+
+    <div class="container paper-card">
+        
+        <div class="mode-tabs">
+            <button id="btnClock" class="active" onclick="switchTab(true)">Clock</button>
+            <button id="btnStopwatch" onclick="switchTab(false)">Stopwatch</button>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="display-area pop-in" id="clockBox">
+                <div class="time-group">
+                    <div class="digit-box">
+                        <span id="hours">12</span>
+                        <p>HOURS</p>
+                    </div>
+                    <span class="colon">:</span>
+                    <div class="digit-box">
+                        <span id="minutes">00</span>
+                        <p>MINS</p>
+                    </div>
+                    <span class="colon mobile-hide">:</span>
+                    <div class="digit-box mobile-hide">
+                        <span id="seconds">00</span>
+                        <p>SECS</p>
+                    </div>
+                </div>
+                <div class="ampm-tag">
+                    <span id="ampm">AM</span>
+                </div>
+            </div>
+
+            <div class="display-area hidden" id="stopwatchBox">
+                <span id="swTime" class="mono-font">00:00:00</span>
+            </div>
+        </div>
+
+        <div class="controls-wrapper">
+            <div id="clockControls" class="control-group">
+                <button id="toggleFormatBtn" class="pill-btn blue-btn">24H Mode</button>
+            </div>
+            <div id="swControls" class="control-group hidden">
+                <button id="startBtn" class="pill-btn green-btn">Start</button>
+                <button id="stopBtn" class="pill-btn red-btn">Stop</button>
+                <button id="resetBtn" class="pill-btn gray-btn">Reset</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-hint">Swipe to switch</div>
+
+    <div class="credit-tag">
+        By Vishal S
+    </div>
+</div>
+
+<script src="Script.js"></script>
+</body>
+</html>
