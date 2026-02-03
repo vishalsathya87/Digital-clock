@@ -47,4 +47,4 @@ o	On mobile, Swipe across the clock face to switch modes.
 ________________________________________
 📝 License
 This project is open-source and free to use for educational purposes.
-Deployment link:https: //digital-clock-vishal.vercel.app/
+Deployment link:https: https://digital-clock-vishal.vercel.app/
