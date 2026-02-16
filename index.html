@@ -46,6 +46,7 @@
         <div class="mode-tabs">
             <button id="btnClock" class="active" onclick="switchTab(true)">Clock</button>
             <button id="btnStopwatch" onclick="switchTab(false)">Stopwatch</button>
+            <button id="btnPomodoro" onclick="switchTab('pomodoro')">Pomodoro</button>
         </div>
 
         <div class="content-wrapper">
@@ -74,6 +75,10 @@
             <div class="display-area hidden" id="stopwatchBox">
                 <span id="swTime" class="mono-font">00:00:00</span>
             </div>
+            <div class="display-area hidden" id="pomodoroBox">
+            <div id="pomoLabel" class="ampm-tag" style="transform: rotate(3deg); background: #6BCB77; margin-bottom: 10px;">Focus</div>
+            <div id="pomoTime" class="mono-font">25:00</div>
+    </div>
         </div>
 
         <div class="controls-wrapper">
@@ -84,6 +89,11 @@
                 <button id="startBtn" class="pill-btn green-btn">Start</button>
                 <button id="stopBtn" class="pill-btn red-btn">Stop</button>
                 <button id="resetBtn" class="pill-btn gray-btn">Reset</button>
+            </div>
+            <div id="pomoControls" class="control-group hidden">
+                <button id="pomoStartBtn" class="pill-btn green-btn">Start</button>
+                <button id="pomoPauseBtn" class="pill-btn blue-btn">Pause</button>
+                <button id="pomoResetBtn" class="pill-btn gray-btn">Reset</button>
             </div>
         </div>
     </div>
